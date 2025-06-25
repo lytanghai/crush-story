@@ -68,7 +68,7 @@
   --s: 12px; /* control the size */
   --c: #222;
  
-  width: calc(20*var(--s));
+  width: calc(13*var(--s));
   aspect-ratio: 1.25;
   background: 
     conic-gradient(at 50% var(--s),var(--c) 75%,#0000 0) 
@@ -79,4 +79,14 @@
   /* you can add a filter for an oldish effect 
   filter: sepia(1) brightness(0.9) grayscale(.2);
   */
+}
+
+/* Beat Line */
+.beat-line{
+    position: fixed;
+    width: 97.5%;
+    height: 3px;
+    top: 6%;
+    background-color: #000;
+    z-index: -1;
 }

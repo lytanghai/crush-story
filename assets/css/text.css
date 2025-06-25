@@ -25,3 +25,37 @@
   75% { transform: scale(2,2) }
   100% { transform: scale(1,1) }
 }
+/* Register Email */
+.intro-body{
+  background-color: rgb(43, 42, 41);
+  height: 32px;
+  padding-top: 4px;
+  font-size: 1rem;
+  border-radius: 12px;
+}
+
+.intro-body-h1{
+  color: #ff00b3;
+  text-shadow: 0px 0px 50px #8a6d8d;
+  animation: shadow 4s linear infinite;
+}
+@keyframes shadow{
+  0%{text-shadow: 0px 0px 50px #c000d1; font-size: 12px;}
+  50%{text-shadow: 0px 0px 100px #fff; font-size: 14px;}
+  100%{text-shadow: 0px 0px 50px #c000d1; font-size: 12px;}
+}
+
+/* Type writer quote */
+#typewriter {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid pink;
+  font-size: 1.1rem;
+  color: rgb(243, 107, 175);
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: pink; }
+}
