@@ -1,0 +1,139 @@
+* {
+  font-family: 'JetBrains Mono';
+  font-size: 22px;
+}
+
+.main-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 8px;
+  /* background-color: #603d3d; */
+  text-align: center;
+}
+
+.div1 {
+  grid-column: span 6 / span 6;
+  /* background-color: #e9d2d2; */
+}
+
+.div2 {
+  grid-column: span 6 / span 6;
+  grid-row: span 2 / span 2;
+  grid-row-start: 2;
+  /* background-color: #ba3030; */
+  display: inline;
+  flex-direction: row;
+  align-items: end;
+}
+
+.div3 {
+  grid-column: span 6 / span 6;
+  grid-row-start: 4;
+  /* background-color: #a0c93a; */
+}
+
+.div4 {
+  grid-row: span 2 / span 2;
+  grid-row-start: 5;
+  /* background-color: #9058c4; */
+}
+
+.div5 {
+  grid-column: span 4 / span 4;
+  grid-row: span 2 / span 2;
+  grid-row-start: 5;
+  /* background-color: #3e0e2b; */
+}
+
+.div6 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 6;
+  grid-row-start: 5;
+  /* background-color: #d5c63d; */
+}
+
+.div7 {
+  grid-column: span 6 / span 6;
+  grid-row-start: 7;
+  /* background-color: #2f703e; */
+}
+
+.main-intro-div1 {
+  font-size: 1.5rem;
+}
+
+/* Avatar */
+.main-intro{
+  max-width: 260px;
+}
+
+/* Input Email */
+:root {
+  --bg: rgb(199, 196, 202);
+  --white: rgb(190, 190, 190);
+  --dark: rgb(0,0,0);
+  --primary: rgb(50, 206, 154);
+  --placeholder: rgb(106, 102, 108);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.wrapper {
+  width: 80%;
+  height: 100%;
+  margin-left: 25px;
+  display: grid;
+  align-items: center;
+
+  & > * {
+    grid-column: 1;
+    grid-row: 1;
+    font: 1.1rem futura,helvetica,sans-serif;
+    color: var(--white);
+  }
+
+  & input {
+    position: relative;
+    border: 1.5px solid var(--white);
+    border-radius: 0.25rem;
+    outline: none;
+    background-color: transparent;
+    color: var(--white);
+    padding: 1rem;
+    z-index: 0;
+    transition: border-color 0.5s;
+
+    &:focus { border-color: var(--primary); }
+
+    &:focus ~ span, 
+    &:not(:placeholder-shown) ~ span {
+      transform: translateY(-1.8rem) scale(0.75);
+      padding: 0 0.25rem;
+      color: var(--dark);
+    }
+  }
+
+  & span {
+    width: max-content;
+    background-color: var(--bg);
+    margin-left: 1rem;
+    color: var(--placeholder);
+    transition: transform 0.5s;
+  }
+}

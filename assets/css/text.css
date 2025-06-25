@@ -1,0 +1,28 @@
+.hb-el {
+  cursor: pointer;
+}
+
+.hb-el {
+  animation: 5s ease 1s infinite heartbeat;
+}
+
+.heartbeat {
+  color: #000000;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  /* font-weight: 700; */
+}
+
+.rect {
+  margin-top: 30px;
+  width: 140px;
+  height: 70px;
+  background: #f0c267;
+}
+
+@keyframes heartbeat {
+  25% { transform: scale(1.4,1.4) }
+  50% { transform: scale(1.6,1.6) }
+  75% { transform: scale(2,2) }
+  100% { transform: scale(1,1) }
+}
