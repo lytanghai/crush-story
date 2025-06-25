@@ -1,30 +1,47 @@
+:root {
+  --bg: rgb(199, 196, 202);
+  --white: rgb(190, 190, 190);
+  --dark: rgb(0, 0, 0);
+  --primary: rgb(50, 206, 154);
+  --placeholder: rgb(106, 102, 108);
+  --body-color: #010c15;
+  --box-bg: #cf6b2b;
+  --box-fg: var(--body-color);
+  --box-border: #d3d3d3;
+  --box-width: 150px;
+  --border-radius: 5px;
+  /* color-scheme: dark; */
+}
+
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'JetBrains Mono';
   font-size: 22px;
 }
 
 .prevent-select {
   -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  -ms-user-select: none;     /* IE 10 and 11 */
+  user-select: none;         /* Standard syntax */
 }
 
 .main-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
 }
 
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  gap: 8px;
-  /* background-color: #603d3d; */
+  gap: 4px;
   text-align: center;
+  margin: 1rem;
 }
 
 .div1 {
@@ -41,6 +58,7 @@
 }
 
 .div3 {
+  margin-top: -20px;
   grid-column: span 6 / span 6;
   grid-row-start: 4;
 }
@@ -73,26 +91,55 @@
   font-size: 1.5rem;
 }
 
-/* Avatar */
-.main-intro{
-  max-width: 260px;
+.main-intro {
+  max-width: 250px;
 }
 
-/* Input Email */
-:root {
-  --bg: rgb(199, 196, 202);
-  --white: rgb(190, 190, 190);
-  --dark: rgb(0,0,0);
-  --primary: rgb(50, 206, 154);
-  --placeholder: rgb(106, 102, 108);
+.nav-body {
+  height: 7.5vh;
+  display: grid;
+  overflow: hidden;
+  place-content: center;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+nav {
+  margin: 10%;
+  display: flex;
+  text-align: center;
+  font: bold 1.5rem sans-serif;
+  box-shadow: 0 5px 50px 0px rgba(255, 255, 255, 0.3);
 }
 
+nav a {
+  transition: 0.2s;
+  color: var(--box-fg);
+  text-decoration: none;
+  width: var(--box-width);
+  background: var(--box-bg);
+  padding: calc(var(--box-width) / 10);
+}
+
+nav a:first-child {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+nav a:last-child {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+nav:hover a {
+  filter: blur(3px);
+  opacity: 0.5;
+  outline: 1px solid var(--box-bg);
+}
+
+nav:hover a:hover {
+  filter: blur(0px);
+  opacity: 1;
+  outline: 1px solid var(--box-border);
+}
 
 .wrapper {
   width: 80%;
@@ -100,42 +147,44 @@
   margin-left: 25px;
   display: grid;
   align-items: center;
+}
 
-  & > * {
-    grid-column: 1;
-    grid-row: 1;
-    font: 1.1rem futura,helvetica,sans-serif;
-    color: var(--white);
-  }
+.wrapper > * {
+  grid-column: 1;
+  grid-row: 1;
+  font: 1.1rem futura, helvetica, sans-serif;
+  color: var(--white);
+}
 
-  & input {
-    position: relative;
-    border: 1.5px solid var(--white);
-    border-radius: 0.25rem;
-    outline: none;
-    background-color: transparent;
-    color: var(--white);
-    padding: 1rem;
-    z-index: 0;
-    transition: border-color 0.5s;
+.wrapper input {
+  position: relative;
+  border: 1.5px solid var(--white);
+  border-radius: 0.25rem;
+  outline: none;
+  background-color: transparent;
+  color: var(--white);
+  padding: 1rem;
+  z-index: 0;
+  transition: border-color 0.5s;
+}
 
-    &:focus { border-color: var(--primary); }
+.wrapper input:focus {
+  border-color: var(--primary);
+}
 
-    &:focus ~ span, 
-    &:not(:placeholder-shown) ~ span {
-      transform: translateY(-1.8rem) scale(0.75);
-      padding: 0 0.25rem;
-      color: var(--dark);
-    }
-  }
+.wrapper input:focus ~ span,
+.wrapper input:not(:placeholder-shown) ~ span {
+  transform: translateY(-1.8rem) scale(0.75);
+  padding: 0 0.25rem;
+  color: var(--dark);
+}
 
-  & span {
-    width: max-content;
-    background-color: var(--bg);
-    margin-left: 1rem;
-    color: var(--placeholder);
-    transition: transform 0.5s;
-  }
+.wrapper span {
+  width: max-content;
+  background-color: var(--bg);
+  margin-left: 1rem;
+  color: var(--placeholder);
+  transition: transform 0.5s;
 }
 
 .submit-btn {
