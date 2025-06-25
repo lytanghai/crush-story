@@ -3,15 +3,20 @@
   font-size: 22px;
 }
 
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 .main-container {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
-
 
 .parent {
   display: grid;
@@ -24,14 +29,12 @@
 
 .div1 {
   grid-column: span 6 / span 6;
-  /* background-color: #e9d2d2; */
 }
 
 .div2 {
   grid-column: span 6 / span 6;
   grid-row: span 2 / span 2;
   grid-row-start: 2;
-  /* background-color: #ba3030; */
   display: inline;
   flex-direction: row;
   align-items: end;
@@ -40,33 +43,30 @@
 .div3 {
   grid-column: span 6 / span 6;
   grid-row-start: 4;
-  /* background-color: #a0c93a; */
 }
 
 .div4 {
   grid-row: span 2 / span 2;
   grid-row-start: 5;
-  /* background-color: #9058c4; */
 }
 
 .div5 {
   grid-column: span 4 / span 4;
   grid-row: span 2 / span 2;
   grid-row-start: 5;
-  /* background-color: #3e0e2b; */
+  display: flex;
+  align-items: center;
 }
 
 .div6 {
   grid-row: span 2 / span 2;
   grid-column-start: 6;
   grid-row-start: 5;
-  /* background-color: #d5c63d; */
 }
 
 .div7 {
   grid-column: span 6 / span 6;
   grid-row-start: 7;
-  /* background-color: #2f703e; */
 }
 
 .main-intro-div1 {
@@ -136,4 +136,10 @@
     color: var(--placeholder);
     transition: transform 0.5s;
   }
+}
+
+.submit-btn {
+  margin-left: 15px;
+  width: 150px;
+  height: 50px;
 }

@@ -1,18 +1,3 @@
-/* HTML: <div class="rounded-dashes"></div> */
-.rounded-dashes {
-  --s: 15px;    /* control the size */
-  --c: #774F38; /* the color */
-  
-  height: var(--s);
-  width: 100%;
-  --_g: var(--s) top 50%,var(--c) calc(100% - 1px),#0000;
-  background: 0/calc(4*var(--s)) space no-repeat;
-  background-image: 
-   radial-gradient(circle closest-side at left  var(--_g)),   
-   radial-gradient(circle closest-side at right var(--_g)),   
-   linear-gradient(90deg,#0000 25%,var(--c) 0 75%,#0000 0);
-}
-
 .heart-body {
   background: #111115;
   display: flex;
@@ -76,4 +61,22 @@
     opacity: 0;
     transform: scale(3);
   }
+}
+
+
+.film-strip {
+  --s: 12px; /* control the size */
+  --c: #222;
+ 
+  width: calc(20*var(--s));
+  aspect-ratio: 1.25;
+  background: 
+    conic-gradient(at 50% var(--s),var(--c) 75%,#0000 0) 
+    0 0/calc(2*var(--s)) calc(100% - var(--s)) padding-box;
+  border: var(--s) solid var(--c);
+  padding: calc(var(--s)*2.5) calc(var(--s)*1.5);
+  box-sizing: content-box;
+  /* you can add a filter for an oldish effect 
+  filter: sepia(1) brightness(0.9) grayscale(.2);
+  */
 }
