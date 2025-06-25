@@ -1,5 +1,6 @@
 :root {
   --bg: rgb(199, 196, 202);
+  --main: rgb(32, 6, 69);
   --white: rgb(190, 190, 190);
   --dark: rgb(0, 0, 0);
   --primary: rgb(50, 206, 154);
@@ -10,7 +11,7 @@
   --box-border: #d3d3d3;
   --box-width: 150px;
   --border-radius: 5px;
-  /* color-scheme: dark; */
+  color-scheme: light;
 }
 
 * {
@@ -36,6 +37,7 @@
   left: 0;
   height: 100%;
   width: 100%;
+  /* background-color: #cf6b2b; */
 }
 
 .parent {
@@ -123,7 +125,6 @@ nav {
   margin: 10%;
   display: flex;
   text-align: center;
-  font: bold 1.5rem sans-serif;
   box-shadow: 0 5px 50px 0px rgba(255, 255, 255, 0.3);
 }
 
@@ -169,7 +170,6 @@ nav:hover a:hover {
 .wrapper>* {
   grid-column: 1;
   grid-row: 1;
-  font: 1.1rem futura, helvetica, sans-serif;
   color: var(--white);
 }
 
@@ -184,12 +184,14 @@ nav:hover a:hover {
   z-index: 0;
   transition: border-color 0.5s;
   text-align: center;
+  letter-spacing: 2px;
 }
 
 .wrapper input:focus {
   border-color: var(--primary);
   color: var(--dark);
   text-align: center;
+  letter-spacing: 2px;
 }
 
 .wrapper input:focus~span,

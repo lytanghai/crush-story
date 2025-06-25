@@ -1,5 +1,4 @@
 window.onload = function () {
-  // 👀 Funny auto-refresh quotes
   const quotes = [
     "Crushes are like Wi-Fi signals… strong until you’re too scared to connect. Just confess already! 🥰",
     "Love is like a fart — if you force it, it’s probably poop. But if it’s real, let it out! 🤢",
@@ -26,41 +25,67 @@ window.onload = function () {
   }
 
   showRandomQuote(); // show once immediately
-  setInterval(showRandomQuote, 5000); // then every 5 sec
+  setInterval(showRandomQuote, 7000); // then every 7 sec
 
   // ✍️ Typewriter effect for famous love quotes
   const loveQuotes = [
-    "I wish I had done everything on Earth with you. – F. Scott Fitzgerald",
-    "You had me at hello. – Jerry Maguire",
-    "Whatever our souls are made of, his and mine are the same. – Emily Brontë",
-    "I would rather spend one lifetime with you than face all the ages of this world alone. – J.R.R. Tolkien",
-    "Love is composed of a single soul inhabiting two bodies. – Aristotle"
-  ];
+  {
+    quote: "I wish I had done everything on Earth with you.",
+    author: "F. Scott Fitzgerald"
+  },
+  {
+    quote: "You had me at hello.",
+    author: "Jerry Maguire"
+  },
+  {
+    quote: "Whatever our souls are made of, his and mine are the same.",
+    author: "Emily Brontë"
+  },
+  {
+    quote: "I would rather spend one lifetime with you than face all the ages of this world alone.",
+    author: "J.R.R. Tolkien"
+  },
+  {
+    quote: "Love is composed of a single soul inhabiting two bodies.",
+    author: "Aristotle"
+  }
+];
 
-  const typewriterEl = document.getElementById("typewriter");
-  let quoteIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
+const typedEl = document.getElementById("typed-quote");
+const authorEl = document.getElementById("quote-author");
 
-  function type() {
-    const currentQuote = loveQuotes[quoteIndex];
-    const visibleText = currentQuote.substring(0, charIndex);
-    typewriterEl.textContent = visibleText;
+let quoteIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-    if (!isDeleting && charIndex < currentQuote.length) {
-      charIndex++;
-      setTimeout(type, 50);
-    } else if (isDeleting && charIndex > 0) {
-      charIndex--;
-      setTimeout(type, 25);
+function type() {
+  const current = loveQuotes[quoteIndex];
+  const visibleText = current.quote.substring(0, charIndex);
+
+  typedEl.textContent = visibleText;
+
+  if (!isDeleting && charIndex < current.quote.length) {
+    charIndex++;
+    setTimeout(type, 50);
+  } else if (isDeleting && charIndex > 0) {
+    charIndex--;
+    authorEl.textContent = ""; // hide author while deleting
+    setTimeout(type, 25);
+  } else {
+    if (!isDeleting) {
+      // Done typing, show author
+      authorEl.textContent = `– ${current.author}`;
+      setTimeout(() => {
+        isDeleting = true;
+        setTimeout(type, 2000); // pause before deleting
+      }, 1500); // pause to read quote + author
     } else {
-      isDeleting = !isDeleting;
-      if (!isDeleting) {
-        quoteIndex = (quoteIndex + 1) % loveQuotes.length;
-      }
-      setTimeout(type, 1000);
+      isDeleting = false;
+      quoteIndex = (quoteIndex + 1) % loveQuotes.length;
+      setTimeout(type, 2000); // short pause before next quote
     }
   }
+}
 
   type(); // start typing
 };

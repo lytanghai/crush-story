@@ -1,0 +1,40 @@
+# OS-specific junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# VS Code / JetBrains IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+
+# GitHub Codespaces or Dev Containers
+.devcontainer/
+*.code-workspace
+
+# Optional OS-specific
+*.orig
+
+# Misc
+*.zip
+*.tar.gz
+*.7z
+*.rar
+*.exe
+*.dll
+
+# Ignore compiled JS map files
+*.map
+
+# Ignore generated files by tools
+public/

@@ -52,7 +52,7 @@
   border-right: 2px solid pink;
   font-size: 1.1rem;
   color: rgb(243, 107, 175);
-  animation: blink 0.7s infinite;
+  animation: blink 2s infinite;
 }
 
 @keyframes blink {
