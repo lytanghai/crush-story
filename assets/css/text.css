@@ -1,8 +1,5 @@
 .hb-el {
   cursor: pointer;
-}
-
-.hb-el {
   animation: 5s ease 1s infinite heartbeat;
 }
 
