@@ -1,6 +1,6 @@
 window.onload = function () {
   const quotes = [
-    "Crushes are like Wi-Fi signals… strong until you’re too scared to connect. Just confess already! 🥰",
+    // "Crushes are like Wi-Fi signals strong until you’re too scared to connect. Just confess already! 🥰",
     "Love is like a fart — if you force it, it’s probably poop. But if it’s real, let it out! 🤢",
     "Confess your love before they become someone else’s ‘good morning’ text! 🥱",
     "Do it now. Your future couple photos are waiting. 💏",
@@ -36,18 +36,6 @@ window.onload = function () {
   {
     quote: "You had me at hello.",
     author: "Jerry Maguire"
-  },
-  {
-    quote: "Whatever our souls are made of, his and mine are the same.",
-    author: "Emily Brontë"
-  },
-  {
-    quote: "I would rather spend one lifetime with you than face all the ages of this world alone.",
-    author: "J.R.R. Tolkien"
-  },
-  {
-    quote: "Love is composed of a single soul inhabiting two bodies.",
-    author: "Aristotle"
   }
 ];
 

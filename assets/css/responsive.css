@@ -1,11 +1,95 @@
-@media only screen and (min-width: 481px) and (max-width: 992px) {}
+@media only screen and (min-width: 481px) and (max-width: 992px) {
+
+    .intro-body {
+        position: absolute;
+        margin-top: 7%;
+        margin-left: 1%;
+        width: 90%;
+        height: 7%;
+    }
+
+    .intro-body-h1 {
+        padding: 5px 0;
+        animation: none;
+    }
+
+    .div4,
+    .div6 {
+        display: none;
+    }
+
+    .div5 {
+        position: absolute;
+        top: 45%;
+        align-items: center;
+        width: 94%;
+        margin-top: 20%;
+        background-color: #fff;
+    }
+
+    .div7 {
+        position: absolute;
+        width: 93%;
+        height: 120px;
+        padding: 0 3px;
+        text-align: center;
+        align-items: center;
+        bottom: 22%;
+        margin: 0 auto;
+    }
+
+    .rounded-edge {
+        display: block;
+    }
+
+}
 
 @media (max-width: 480px) {
     .parent {
         display: block;
         align-items: center;
     }
-    
+
+    .intro-body {
+        position: absolute;
+        margin-top: 4%;
+        margin-left: 1%;
+        width: 90%;
+        height: 60px;
+    }
+
+    .intro-body-h1 {
+        padding: 5px 0;
+        animation: none;
+    }
+
+    .div3 {
+        margin-top: 5%;
+        padding: 30px 0;
+    }
+
+    .div5 {
+        margin-top: 20%;
+        background-color: #fff;
+        display: block;
+    }
+
+    .div5 .wrapper {
+        width: 88%;
+    }
+
+    .div5 .submit-btn {
+        margin-top: 4%;
+    }
+
+    .div4,
+    .div6 {
+        display: none;
+    }
+
+    .rounded-edge {
+        display: block;
+    }
 }
 
 @media (max-width: 374px) {

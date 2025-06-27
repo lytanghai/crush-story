@@ -42,8 +42,8 @@
   left: 0;
   height: 100%;
   width: 100%;
-  /* background-color: #cf6b2b; */
-  background: linear-gradient(to right, #e1eec3, #f05053);
+  background-color: #fefcfb;
+  /* background: linear-gradient(to right, #e1eec3, #f05053); */
 }
 
 .parent {
@@ -97,6 +97,8 @@
 .div7 {
   grid-column: span 6 / span 6;
   grid-row-start: 7;
+  /* background-color: rgb(250, 235, 215) */
+  /* background-color: #ffb7b0; */
 }
 
 .main-intro-div1 {

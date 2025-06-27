@@ -17,13 +17,25 @@
 }
 
 @keyframes heartbeat {
-  25% { transform: scale(1.4,1.4) }
-  50% { transform: scale(1.6,1.6) }
-  75% { transform: scale(2,2) }
-  100% { transform: scale(1,1) }
+  25% {
+    transform: scale(1.4, 1.4)
+  }
+
+  50% {
+    transform: scale(1.6, 1.6)
+  }
+
+  75% {
+    transform: scale(2, 2)
+  }
+
+  100% {
+    transform: scale(1, 1)
+  }
 }
+
 /* Register Email */
-.intro-body{
+.intro-body {
   background-color: rgb(43, 42, 41);
   height: 32px;
   padding-top: 4px;
@@ -31,15 +43,27 @@
   border-radius: 12px;
 }
 
-.intro-body-h1{
+.intro-body-h1 {
   color: #ff00b3;
   text-shadow: 0px 0px 50px #8a6d8d;
   animation: shadow 4s linear infinite;
 }
-@keyframes shadow{
-  0%{text-shadow: 0px 0px 50px #c000d1; font-size: 12px;}
-  50%{text-shadow: 0px 0px 100px #fff; font-size: 14px;}
-  100%{text-shadow: 0px 0px 50px #c000d1; font-size: 12px;}
+
+@keyframes shadow {
+  0% {
+    text-shadow: 0px 0px 50px #c000d1;
+    font-size: 12px;
+  }
+
+  50% {
+    text-shadow: 0px 0px 100px #fff;
+    font-size: 14px;
+  }
+
+  100% {
+    text-shadow: 0px 0px 50px #c000d1;
+    font-size: 12px;
+  }
 }
 
 /* Type writer quote */
@@ -53,6 +77,43 @@
 }
 
 @keyframes blink {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: pink; }
+
+  0%,
+  100% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: pink;
+  }
+}
+
+/* Story */
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+.story-body-txt {
+  color: hsl(198, 1%, 29%);
+  font-family: 'Gochi Hand', cursive;
+  text-align: center;
+  font-size: 6px;  
+}
+
+.story-body-txt h2 {
+  line-height: 1.5;
+  display: inline;
+  background-image: linear-gradient(
+        transparent 50%,
+        #e1fffe 50%,
+        #b0f8ff 90%,
+        transparent 85%,
+        transparent 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
+}
+
+@keyframes animatedBackground {
+    to {
+        background-size: 100% 100%;
+    }
 }
